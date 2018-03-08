@@ -1,0 +1,302 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="limited.it.planet.incomingcallrecordapp.fragments.SettingsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Send Sms Or Phone Number"
+            android:textSize="17dp"
+            android:textColor="#1f1f1f"
+
+            />
+
+        <CheckBox
+            android:id="@+id/checkbox_send_sms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SMS"
+            android:layout_marginLeft="30dp"
+            />
+
+        <CheckBox
+            android:id="@+id/checkbox_send_incoming_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mobile Number"
+            android:layout_marginLeft="30dp"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forward Incoming Call To HTTP:"
+            android:layout_marginLeft="20dp"
+            android:textSize="17dp"
+            android:textColor="#1f1f1f"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/text_input_border"
+            android:orientation="vertical"
+            >
+            <EditText
+                android:id="@+id/edt_http_url_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:background="#00000000"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center"
+                />
+            <!--<RelativeLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content">-->
+            <!--<EditText-->
+                <!--android:id="@+id/edt_show_number"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="3dp"-->
+                <!--android:background="#00000000"-->
+                <!--android:layout_marginTop="3dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:editable="false"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--/>-->
+
+            <!--</RelativeLayout>-->
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Help:"
+                android:layout_marginLeft="20dp"
+                android:textSize="17dp"
+                android:textColor="#1f1f1f"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="10dp"
+
+                android:orientation="vertical"
+                >
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:textColor="#1f1f1f"
+                    android:layout_marginLeft="10dp"
+                    android:text="Incoming Number will be forward to"
+                    />
+                <TextView
+                    android:id="@+id/txv_help_call"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:textColor="#1f1f1f"
+                    android:layout_marginLeft="10dp"
+                    />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forward Incoming SMS To HTTP:"
+            android:layout_marginLeft="20dp"
+            android:textSize="17dp"
+            android:textColor="#1f1f1f"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/text_input_border"
+            android:orientation="vertical"
+            >
+            <EditText
+                android:id="@+id/edt_http_url_sms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:background="#00000000"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center"
+                />
+            <!--<RelativeLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content">-->
+            <!--<EditText-->
+            <!--android:id="@+id/edt_show_number"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="3dp"-->
+            <!--android:background="#00000000"-->
+            <!--android:layout_marginTop="3dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:editable="false"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--/>-->
+
+            <!--</RelativeLayout>-->
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="15dp"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Help:"
+                android:layout_marginLeft="20dp"
+                android:textSize="17dp"
+                android:textColor="#1f1f1f"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="10dp"
+
+                android:orientation="vertical"
+                >
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:textColor="#1f1f1f"
+                    android:layout_marginLeft="10dp"
+                    android:text="Incoming Number will be forward to"
+                    />
+                <TextView
+                    android:id="@+id/txv_help_sms"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:textColor="#1f1f1f"
+                    android:layout_marginLeft="10dp"
+                    />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/text_input_border"
+            android:orientation="vertical"
+            >
+            <EditText
+                android:id="@+id/edt_param_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:background="#00000000"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center"
+                android:hint="parametar call"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/text_input_border"
+            android:orientation="vertical"
+            >
+            <EditText
+                android:id="@+id/edt_param_sms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:background="#00000000"
+                android:layout_marginTop="3dp"
+                android:layout_gravity="center"
+                android:hint="parametar sms"
+                />
+
+        </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>
