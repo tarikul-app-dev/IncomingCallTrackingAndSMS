@@ -102,7 +102,8 @@ public class MyPhoneReceiver extends BroadcastReceiver {
         sendMobNumberToServer = new SendMobNumberToServer(ctx);
         boolean checkAutoCallEndYes = getBoleanValueSharedPreferences("auto_call_end_yes",ctx);
         boolean isAppOn = getBoleanValueSharedPreferences("app_on_yes",ctx);
-        Toast.makeText(ctx, String.valueOf(isAppOn), Toast.LENGTH_SHORT).show();
+        boolean isInComingNumber = getBoleanValueSharedPreferences("is_mobile",context);
+//        Toast.makeText(ctx, String.valueOf(isAppOn), Toast.LENGTH_SHORT).show();
 
 
         if(checkAutoCallEndYes && isAppOn){
@@ -196,8 +197,10 @@ public class MyPhoneReceiver extends BroadcastReceiver {
                             .getString(TelephonyManager.EXTRA_INCOMING_NUMBER);
 
                    // incoming(phoneNumber);
+                  //  sendMobNumberToServer.mobileNumberSendToServer(phoneNumber);
+                  //  SettingsFragment.inComingNumber(phoneNumber);
                     sendMobNumberToServer.mobileNumberSendToServer(phoneNumber);
-                    SettingsFragment.inComing(phoneNumber);
+
 
                     Toast.makeText(ctx, phoneNumber, Toast.LENGTH_SHORT).show();
 

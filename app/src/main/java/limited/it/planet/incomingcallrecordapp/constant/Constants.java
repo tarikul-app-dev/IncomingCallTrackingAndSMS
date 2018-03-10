@@ -5,7 +5,8 @@ package limited.it.planet.incomingcallrecordapp.constant;
  */
 
 public class Constants {
-    public  static  final String sendMobNumberAPI = "https://apps.planetgroupbd.com/ords/accounts/api/device?gsm=88017";
-    public  static  final String sendSMSAPI = "https://apps.planetgroupbd.com/ords/accounts/api/device?gsm=88017&sms=hello";
+    public  static  final String baseAPI = "https://apps.planetgroupbd.com/ords/accounts/tracking/device/data";
+    public static final String  LOG_TAG_RESPONSE = "LOG_TAG_RESPONSE";
+
 
 }

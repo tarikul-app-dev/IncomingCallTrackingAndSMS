@@ -6,14 +6,9 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.io.IOException;
 
 import limited.it.planet.incomingcallrecordapp.constant.Constants;
-import limited.it.planet.incomingcallrecordapp.database.DataHelper;
-import limited.it.planet.incomingcallrecordapp.fragments.DashboardFragment;
 import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -23,34 +18,36 @@ import okhttp3.Response;
 import static limited.it.planet.incomingcallrecordapp.util.SharedPreferenceSaveAndGet.getValueFromSharedPreferences;
 
 /**
- * Created by Tarikul on 3/1/2018.
+ * Created by Tarikul on 3/10/2018.
  */
 
-public class SendMobNumberToServer {
-    String sendMobNumberAPI = "";
+public class SendSMSSendToServer {
     public static final String RESPONSE_LOG = Constants.LOG_TAG_RESPONSE;
+    String sendSMSAPI = "";
 
     Context mContext;
-      public  SendMobNumberToServer(Context context){
-            this.mContext = context;
-          sendMobNumberAPI = getValueFromSharedPreferences("mob_number_api",mContext);
-        }
+    public  SendSMSSendToServer(Context context){
+        this.mContext = context;
+        sendSMSAPI = getValueFromSharedPreferences("sms_api",mContext);
+    }
 
-        public void mobileNumberSendToServer(String number){
+    public void smsSendToServer(String sms,String number){
 
-            //if(sendMobNumberAPI!=null && !sendMobNumberAPI.isEmpty()){
-                SendIncomingNumberTask sendIncomingNumberTask = new SendIncomingNumberTask(number);
-                sendIncomingNumberTask.execute();
-         //   }
+       // if(sendSMSAPI!=null && !sendSMSAPI.isEmpty()){
+            SendSMSTask sendSMSTask = new SendSMSTask(sms,number);
+            sendSMSTask.execute();
+       // }
 
 
-        }
+    }
 
-    public class SendIncomingNumberTask extends AsyncTask<String, Integer, String> {
+    public class SendSMSTask extends AsyncTask<String, Integer, String> {
+        String mSMSNumber;
+        String mSms;
 
-            String mIncomingNumber ;
-        public  SendIncomingNumberTask (String incomingNumber){
-            this.mIncomingNumber = incomingNumber;
+        public SendSMSTask (String sms,String smsNumber){
+            mSms = sms;
+            mSMSNumber = smsNumber;
         }
 
         @Override
@@ -66,7 +63,8 @@ public class SendMobNumberToServer {
 
             try {
                 RequestBody requestBody = new FormBody.Builder()
-                        .add("mob",mIncomingNumber)
+                        .add("mob",mSMSNumber)
+                        .add("text",mSms)
                         .build();
 
 
@@ -82,6 +80,14 @@ public class SendMobNumberToServer {
                 if (response.isSuccessful()){
                     final String result = response.body().string();
                     Log.d(RESPONSE_LOG,result);
+
+//                    ((Activity)mContext).runOnUiThread(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            Toast.makeText(mContext, result, Toast.LENGTH_SHORT).show();
+//
+//                        }
+//                    });
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -95,5 +101,7 @@ public class SendMobNumberToServer {
 
         }
 
+
     }
+
 }

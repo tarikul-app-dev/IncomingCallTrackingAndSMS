@@ -52,12 +52,12 @@
             android:layout_height="wrap_content"
             android:text="Forward Incoming Call To HTTP:"
             android:layout_marginLeft="20dp"
-            android:textSize="17dp"
+            android:textSize="12dp"
             android:textColor="#1f1f1f"
             />
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="40dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="13dp"
             android:layout_marginRight="10dp"
@@ -66,12 +66,14 @@
             >
             <EditText
                 android:id="@+id/edt_http_url_call"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
                 android:background="#00000000"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="10dp"
                 android:layout_gravity="center"
+                android:textSize="13dp"
+
                 />
             <!--<RelativeLayout-->
             <!--android:layout_width="wrap_content"-->
@@ -102,7 +104,7 @@
                 android:layout_height="wrap_content"
                 android:text="Help:"
                 android:layout_marginLeft="20dp"
-                android:textSize="17dp"
+                android:textSize="12dp"
                 android:textColor="#1f1f1f"
                 />
             <LinearLayout
@@ -118,7 +120,7 @@
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="17dp"
+                    android:textSize="12dp"
                     android:textColor="#1f1f1f"
                     android:layout_marginLeft="10dp"
                     android:text="Incoming Number will be forward to"
@@ -127,7 +129,7 @@
                     android:id="@+id/txv_help_call"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="17dp"
+                    android:textSize="12dp"
                     android:textColor="#1f1f1f"
                     android:layout_marginLeft="10dp"
                     />
@@ -144,18 +146,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginTop="10dp"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Forward Incoming SMS To HTTP:"
             android:layout_marginLeft="20dp"
-            android:textSize="17dp"
+            android:textSize="12dp"
             android:textColor="#1f1f1f"
             />
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="40dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="13dp"
             android:layout_marginRight="10dp"
@@ -164,12 +167,14 @@
             >
             <EditText
                 android:id="@+id/edt_http_url_sms"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
                 android:background="#00000000"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="10dp"
                 android:layout_gravity="center"
+                android:textSize="13dp"
+
                 />
             <!--<RelativeLayout-->
             <!--android:layout_width="wrap_content"-->
@@ -189,64 +194,18 @@
             <!--</RelativeLayout>-->
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="15dp"
-            >
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Help:"
-                android:layout_marginLeft="20dp"
-                android:textSize="17dp"
-                android:textColor="#1f1f1f"
-                />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="13dp"
-                android:layout_marginRight="10dp"
 
-                android:orientation="vertical"
-                >
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="17dp"
-                    android:textColor="#1f1f1f"
-                    android:layout_marginLeft="10dp"
-                    android:text="Incoming Number will be forward to"
-                    />
-                <TextView
-                    android:id="@+id/txv_help_sms"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="17dp"
-                    android:textColor="#1f1f1f"
-                    android:layout_marginLeft="10dp"
-                    />
-            </LinearLayout>
-
-
-
-        </LinearLayout>
-
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_marginTop="15dp"
         >
 
         <LinearLayout
             android:layout_width="140dp"
-            android:layout_height="match_parent"
+            android:layout_height="30dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="13dp"
             android:layout_marginRight="10dp"
@@ -255,20 +214,21 @@
             >
             <EditText
                 android:id="@+id/edt_param_call"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
                 android:background="#00000000"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="10dp"
                 android:layout_gravity="center"
-                android:hint="parametar call"
+                android:hint="mobile"
+                android:textSize="12dp"
                 />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="140dp"
-            android:layout_height="match_parent"
+            android:layout_height="30dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="13dp"
             android:layout_marginRight="10dp"
@@ -277,26 +237,21 @@
             >
             <EditText
                 android:id="@+id/edt_param_sms"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="3dp"
                 android:background="#00000000"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="10dp"
                 android:layout_gravity="center"
-                android:hint="parametar sms"
+                android:hint="sms"
+                android:textSize="12dp"
                 />
 
         </LinearLayout>
 
 
-
-        </LinearLayout>
-
-
-
-
-
-
+</LinearLayout>
+    </LinearLayout>
 
 
 </LinearLayout>
